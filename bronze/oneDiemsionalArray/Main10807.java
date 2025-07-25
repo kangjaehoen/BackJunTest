@@ -1,4 +1,4 @@
-// 백준 10807번, 개수 세긴
+package bronze.oneDiemsionalArray;// 백준 10807번, 개수 세긴
 
 import java.io.*;
 

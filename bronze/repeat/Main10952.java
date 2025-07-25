@@ -1,3 +1,5 @@
+package bronze.repeat;
+
 import java.io.*;
 
 public class Main10952 {
