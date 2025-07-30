@@ -7,40 +7,46 @@ public class Main1316 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String num = br.readLine();
-        int n = Integer.parseInt(num);
-        int count = 0;
+        String nStr = br.readLine();
+        int n = Integer.parseInt(nStr);
+        int count =0;
 
         for(int i=0;i<n;i++){
-            String str =  br.readLine();
+           String t =  br.readLine();
+
+            char beforeString = 0;
             int[] alpha = new int[26];
 
-
-            int aAscII = 'a';
-            char before = 0;
-            boolean check = true;
+            int aASCII = 'a';
+            boolean check  = true;
 
 
-            for(int j=0;j<str.length();j++){
-                char now =  str.charAt(j);
-                int cAscII = now;
-                int idx = cAscII-aAscII;
+            // happy
+            // a -> h 같을 경우와 다를 경우
+            // 같은 경우는 기록만 해두고.
+            // 다를 경우는 다를 경우는
+           for(int j=0;j<t.length();j++){
+               char nowString = t.charAt(j);
+               int nowASCII = nowString;
 
-               if(now!=before){
-                    if(alpha[idx] != 0){
+
+               if(nowString != beforeString){
+                    if(alpha[nowASCII-aASCII] != 0) {
                         check = false;
                         break;
                     }
-
-                   alpha[idx] =1;
+                   alpha[nowASCII-aASCII] = 1;
                }
-                before = now;
-            }
-            if(check){
-                count ++;
-            }
+               beforeString = nowString;
+           }
+           if(check == true){
+               count ++;
+           }
         }
-        System.out.println(count);
 
+        bw.write(String.valueOf(count));
+        bw.flush();
+        bw.close();
+        br.close();
     }
 }
