@@ -31,7 +31,7 @@ public class Main2738 {
         }
 
         for(int x=0;x<n;x++){
-            for(int y=0;y<n;y++){
+            for(int y=0;y<m;y++){
                bw.write(a[x][y]+b[x][y]+" ");
             }
             bw.newLine();
