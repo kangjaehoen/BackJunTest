@@ -15,6 +15,7 @@ public class Main2941 {
             str = str.replace(c,"@");
             
         }
+
         int num = str.length();
         bw.write(String.valueOf(num));
         bw.flush();
