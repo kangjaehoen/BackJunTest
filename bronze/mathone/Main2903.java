@@ -10,9 +10,9 @@ public class Main2903 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int n = Integer.parseInt(br.readLine()); // 과정 횟수 입력
-        int point = (int) Math.pow(2, n) + 1;    // 한 변의 점 개수
-        int result = point * point;              // 전체 점 개수
+        int n = Integer.parseInt(br.readLine());
+        int point = (int) Math.pow(2, n) + 1;
+        int result = point * point;
 
         bw.write(String.valueOf(result));
         bw.flush();
