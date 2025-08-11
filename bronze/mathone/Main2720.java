@@ -25,6 +25,7 @@ public class Main2720 {
 
            int penny = remain3/1;
 
+
            bw.write(quarter+ " "+dime+" "+nickel+" "+penny);
            bw.newLine();
         }
