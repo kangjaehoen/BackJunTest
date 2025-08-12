@@ -10,9 +10,17 @@ public class Main2903 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int n = Integer.parseInt(br.readLine());
-        int point = (int) Math.pow(2, n) + 1;
-        int result = point * point;
+        String nStr = br.readLine();
+        int n =Integer.parseInt(nStr);
+
+        int m =1;
+        for(int i=0;i<n;i++){
+            m *=2;
+        }
+        int max = m+1;
+        int result = max*max;
+
+
 
         bw.write(String.valueOf(result));
         bw.flush();
