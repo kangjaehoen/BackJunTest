@@ -25,6 +25,8 @@ public class Main2587 {
         bw.write(String.valueOf(avg));
 
         bw.flush();
+        bw.close();
+        br.close();
 
     }
 }
